@@ -34,3 +34,11 @@ class Favicon(object):
 					print("Base asset\"{}\" not found".format(self.file))
 	def color_scheme(self, color):
 		self.color_templates = Bundle()
+app = Flask(__name__)
+favicon = Favicon(app=app, file="static/sc-transparent.png")
+
+@app.route('/')
+def index():
+	return render_template('index.html')
+if __name__ == '__main__':
+     app.run(debug=True)

@@ -1,4 +1,4 @@
-from flask import current_app, _app_ctx_stack, Flask
+from flask import current_app, _app_ctx_stack
 from flask_assets import Environment, Bundle
 import os
 from PIL import Image
